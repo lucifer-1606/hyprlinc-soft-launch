@@ -76,7 +76,7 @@ const Hero = () => {
               algorithm, Hyprlinc connects brands with the right influencers
               based on audience demographics, engagement metrics, and campaign
               goals.
-            
+
             </motion.p>
             <motion.div
               variants={itemVariants}
@@ -86,8 +86,8 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() =>
-                  (window.location.href =
-                    "https://dashboard.hyprlinc.com/creatorsLogin")
+                (window.location.href =
+                  "https://dashboard.hyprlinc.com/brandsLogin")
                 }
                 className="flex cursor-pointer items-center gap-2 rounded-lg border-none bg-gradient-to-r from-[#007AFF] to-[#153885] py-2 md:py-3 px-3 md:px-5 text-[0.9rem] font-semibold text-white shadow-[0_2px_8px_rgba(37,99,235,0.08)] whitespace-nowrap w-full md:w-auto justify-center"
               >
@@ -97,8 +97,8 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() =>
-                  (window.location.href =
-                    "https://dashboard.hyprlinc.com/brandsLogin")
+                (window.location.href =
+                  "https://dashboard.hyprlinc.com/creatorsLogin")
                 }
                 className="flex cursor-pointer items-center gap-2 rounded-lg border-none bg-white text-slate-900 py-2 md:py-3 px-3 md:px-5 text-[0.9rem] font-semibold shadow-[0_2px_8px_rgba(37,99,235,0.08)] whitespace-nowrap w-full md:w-auto justify-center"
               >
@@ -138,32 +138,32 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-              variants={itemVariants}
-              className=" flex flex-row gap-3 md:hidden w-full"
-            >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() =>
-                  (window.location.href =
-                    "https://dashboard.hyprlinc.com/creatorsLogin")
-                }
-                className="flex cursor-pointer items-center gap-2 rounded-lg border-none bg-gradient-to-r from-[#007AFF] to-[#153885] py-2 md:py-3 px-3 md:px-5 text-[0.9rem] font-semibold text-white shadow-[0_2px_8px_rgba(37,99,235,0.08)] whitespace-nowrap w-full md:w-auto justify-center"
-              >
-                Find Brands
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() =>
-                  (window.location.href =
-                    "https://dashboard.hyprlinc.com/brandsLogin")
-                }
-                className="flex cursor-pointer items-center gap-2 rounded-lg border-none bg-white text-slate-900 py-2 md:py-3 px-3 md:px-5 text-[0.9rem] font-semibold shadow-[0_2px_8px_rgba(37,99,235,0.08)] whitespace-nowrap w-full md:w-auto justify-center"
-              >
-                Find Creators
-              </motion.button>
-            </motion.div>
+          variants={itemVariants}
+          className=" flex flex-row gap-3 md:hidden w-full"
+        >
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() =>
+            (window.location.href =
+              "https://dashboard.hyprlinc.com/creatorsLogin")
+            }
+            className="flex cursor-pointer items-center gap-2 rounded-lg border-none bg-gradient-to-r from-[#007AFF] to-[#153885] py-2 md:py-3 px-3 md:px-5 text-[0.9rem] font-semibold text-white shadow-[0_2px_8px_rgba(37,99,235,0.08)] whitespace-nowrap w-full md:w-auto justify-center"
+          >
+            Find Brands
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() =>
+            (window.location.href =
+              "https://dashboard.hyprlinc.com/brandsLogin")
+            }
+            className="flex cursor-pointer items-center gap-2 rounded-lg border-none bg-white text-slate-900 py-2 md:py-3 px-3 md:px-5 text-[0.9rem] font-semibold shadow-[0_2px_8px_rgba(37,99,235,0.08)] whitespace-nowrap w-full md:w-auto justify-center"
+          >
+            Find Creators
+          </motion.button>
+        </motion.div>
       </div>
     </motion.main>
   );

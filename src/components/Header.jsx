@@ -213,15 +213,14 @@ const Header = () => {
   return (
     <>
       {/* Header Bar */}
-      <motion.header 
+      <motion.header
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`sticky top-0 z-10 flex w-full items-center justify-between py-3 pl-4 pr-4 md:pl-8 md:pr-10 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-gray-50 shadow-[0_1px_8px_rgba(0,0,0,0.15)]' 
-            : 'bg-transparent'
-        }`}
+        className={`sticky top-0 z-10 flex w-full items-center justify-between py-3 pl-4 pr-4 md:pl-8 md:pr-10 transition-all duration-300 ${isScrolled
+          ? 'bg-gray-50 shadow-[0_1px_8px_rgba(0,0,0,0.15)]'
+          : 'bg-transparent'
+          }`}
       >
         <div className="flex items-center gap-4 md:gap-9">
           {/* Hamburger for mobile */}
@@ -260,15 +259,15 @@ const Header = () => {
           )}
 
           {/* Logo */}
-          <motion.div 
+          <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex items-center text-[1.7rem] font-bold tracking-[1px]"
           >
-            <img 
-            //   src={isScrolled ? logo : logoWhite}
+            <img
+              //   src={isScrolled ? logo : logoWhite}
               src={logo}
-              alt="HYPRLINC" 
-              className="h-5" 
+              alt="HYPRLINC"
+              className="h-5"
             />
           </motion.div>
 
@@ -368,7 +367,7 @@ const Header = () => {
             <div className="flex gap-2 p-4 justify-end">
               <motion.button
                 whileTap={{ scale: 0.95 }}
-                onClick={() => (window.location.href = "https://dashboard.hyprlinc.com/creatorsRegister")}
+                onClick={() => (window.location.href = "https://dashboard.hyprlinc.com")}
                 className="text-sm text-[#222]"
               >
                 Sign Up
