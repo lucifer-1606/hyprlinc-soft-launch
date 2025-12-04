@@ -307,7 +307,7 @@ const Header = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => (window.location.href = "https://dashboard.hyprlinc.com/creatorsRegister")}
+            onClick={() => (window.location.href = "https://dashboard.hyprlinc.com")}
             className={`text-sm  text-[#222]`}
           >
             Sign Up
