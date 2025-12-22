@@ -45,7 +45,7 @@ const TrustedBrands = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, margin: "-100px" }}
+        viewport={{ once: true, margin: "-100px" }}
         className="py-16 overflow-hidden "
       >
         <div className="max-w-7xl mx-auto px-4">

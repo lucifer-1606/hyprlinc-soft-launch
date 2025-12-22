@@ -103,7 +103,7 @@ const IndustryChallenge = () => {
         <motion.section
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="mx-auto mt-20 mb-16 flex w-full max-w-[1100px] flex-col items-center px-4"
         >
           <motion.div variants={itemVariants} className="inline-flex items-center rounded-full bg-blue-50 py-1 px-4 border border-blue-600">
@@ -129,7 +129,7 @@ const IndustryChallenge = () => {
                 <motion.div 
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: false, margin: "-50px" }}
+                  viewport={{ once: true, margin: "-50px" }}
                   variants={itemVariants} 
                   className="flex items-center gap-3"
                 >
@@ -144,7 +144,7 @@ const IndustryChallenge = () => {
                     key={`left-${index}`}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: false, margin: "-50px" }}
+                    viewport={{ once: true, margin: "-50px" }}
                     variants={leftCardVariants}
                     whileHover="hover"
                     className="bg-white rounded-xl border border-[#fbeaea] p-4 sm:p-5 shadow-sm hover:shadow-md hover:bg-red-50 transition-shadow"
@@ -169,7 +169,7 @@ const IndustryChallenge = () => {
                 <motion.div 
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: false, margin: "-50px" }}
+                  viewport={{ once: true, margin: "-50px" }}
                   variants={itemVariants} 
                   className="flex-1"
                 >
@@ -186,7 +186,7 @@ const IndustryChallenge = () => {
                     key={`right-${index}`}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: false, margin: "-50px" }}
+                    viewport={{ once: true, margin: "-50px" }}
                     variants={rightCardVariants}
                     whileHover="hover"
                     className="bg-white rounded-xl border border-[#e6f9f1] p-4 sm:p-5 shadow-sm hover:shadow-md hover:bg-green-50 transition-shadow"

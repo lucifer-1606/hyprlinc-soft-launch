@@ -208,7 +208,7 @@ const FrequentlyAskedQuestions = () => {
       className="py-16 px-4 bg-gray-50"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, margin: "-50px" }}
+      viewport={{ once: true, margin: "-50px" }}
       variants={containerVariants}
     >
       <div className="max-w-4xl mx-auto">

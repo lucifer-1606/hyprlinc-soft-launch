@@ -503,7 +503,7 @@ const HowItWorks = ({ scrollToSection }) => {
       className="mx-auto w-full max-w-[1100px] px-4 py-16"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
       variants={containerVariants}
       transition={{
         duration: 0.6,

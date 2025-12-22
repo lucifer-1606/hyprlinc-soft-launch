@@ -45,7 +45,7 @@ const Hero = () => {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, margin: "-100px" }}
+      viewport={{ once: true, margin: "-100px" }}
       className="relative mx-auto flex flex-col md:flex-row max-w-[1200px] items-start px-4 pt-4 md:pt-16 pb-0 w-full"
     >
       <div className="flex flex-col w-full md:w-auto md:flex-row justify-between md:gap-6">

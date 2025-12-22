@@ -44,7 +44,7 @@ const EndConnection = () => {
       className="pt-16 px-4 bg-gradient-to-r from-blue-50 to-indigo-50 "
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, margin: "-100px" }}
+      viewport={{ once: true, margin: "-100px" }}
       variants={containerVariants}
     >
       <div className="max-w-4xl mx-auto">

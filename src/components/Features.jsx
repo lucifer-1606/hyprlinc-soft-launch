@@ -93,7 +93,7 @@ const Features = () => {
     <motion.section
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
       variants={containerVariants}
       id="features"
       className="mx-auto mt-1 flex w-full max-w-[1100px] flex-col items-center px-4 py-16"
@@ -120,7 +120,7 @@ const Features = () => {
             key={index}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={cardVariants}
             whileHover="hover"
             className="flex flex-col items-start rounded-2xl border border-solid border-gray-200 bg-[#EDF1FF] p-6 shadow-[0_2px_12px_rgba(0,0,0,0.03)] transition-transform duration-200 hover:border-[#007AFF]"

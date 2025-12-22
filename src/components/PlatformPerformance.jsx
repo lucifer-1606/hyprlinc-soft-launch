@@ -55,7 +55,7 @@ const PlatformPerformanceStats = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
         variants={itemVariants}
         className="inline-flex items-center rounded-full bg-blue-50 py-1 px-4 border border-blue-500"
       >
@@ -68,7 +68,7 @@ const PlatformPerformanceStats = () => {
       <motion.h2
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
         variants={itemVariants}
         className="text-center font-montserrat font-bold text-2xl sm:text-2xl md:text-4xl my-2 bg-gradient-to-r from-[#007AFF] to-[#153885] text-transparent bg-clip-text"
       >
@@ -78,7 +78,7 @@ const PlatformPerformanceStats = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
         variants={itemVariants}
         className="mb-10 max-w-[600px] text-center text-[1.1rem] text-gray-600"
       >
@@ -92,7 +92,7 @@ const PlatformPerformanceStats = () => {
             key={index}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={cardVariants}
             whileHover="hover"
             transition={{
