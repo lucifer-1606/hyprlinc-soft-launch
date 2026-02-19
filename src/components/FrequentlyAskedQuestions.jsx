@@ -2,9 +2,11 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 import { BsArrowUpRight } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const FrequentlyAskedQuestions = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const navigate = useNavigate();
 
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -63,62 +65,6 @@ const FrequentlyAskedQuestions = () => {
         "HyprLinc is currently focused on the Indian market but is designed to scale globally. We’re already onboarding creators and brands for cross-border collaborations.",
     },
   ];
-
-//   return (
-//     <section className="py-16 px-4 bg-gray-50">
-//       <div className="max-w-4xl mx-auto">
-//         <h2 className="text-2xl md:text-3xl font-bold text-center bg-gradient-to-r from-[#007AFF] to-[#153885] text-transparent bg-clip-text mb-8">
-//           Frequently Asked Questions
-//         </h2>
-
-//         <div className="space-y-4">
-//           {faqs.map((faq, index) => (
-//             <div
-//               key={index}
-//               className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden"
-//             >
-//               <button
-//                 className="flex justify-between items-center w-full p-4 md:p-6 text-left hover:bg-gray-50 transition-colors"
-//                 onClick={() => toggleFAQ(index)}
-//               >
-//                 <h3 className="text-sm md:text-base font-semibold text-gray-800 pr-4">
-//                   {faq.question}
-//                 </h3>
-//                 <span className="text-gray-600 flex-shrink-0">
-//                   {activeIndex === index ? (
-//                     <FaAngleUp className="w-5 h-5" />
-//                   ) : (
-//                     <FaAngleDown className="w-5 h-5" />
-//                   )}
-//                 </span>
-//               </button>
-//               {activeIndex === index && (
-//                 <div className="px-4 md:px-6 pb-4 md:pb-6">
-//                   <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-//                     {faq.answer}
-//                   </p>
-//                 </div>
-//               )}
-//             </div>
-//           ))}
-//         </div>
-
-//         <div className=" justify-center flex gap-7 text-center mt-8">
-//           <p className="text-gray-600 m-2">My question is not here.</p>
-//           <button className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-gradient-to-r from-[#007AFF] to-[#153885] text-white font-semibold hover:shadow-lg transition-all">
-//             Contact Us
-//             <BsArrowUpRight className="w-4 h-4" />
-//           </button>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default FrequentlyAskedQuestions;
-
-
-
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -126,9 +72,9 @@ const FrequentlyAskedQuestions = () => {
       opacity: 1,
       transition: {
         delayChildren: 0.3,
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -138,16 +84,16 @@ const FrequentlyAskedQuestions = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const faqItemVariants = {
-    hidden: { 
-      y: 20, 
+    hidden: {
+      y: 20,
       opacity: 0,
-      scale: 0.95
+      scale: 0.95,
     },
     visible: {
       y: 0,
@@ -155,35 +101,35 @@ const FrequentlyAskedQuestions = () => {
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
-      }
+        ease: "easeOut",
+      },
     },
     hover: {
       y: -2,
       scale: 1.02,
       transition: {
-        duration: 0.2
-      }
-    }
+        duration: 0.2,
+      },
+    },
   };
 
   const contentVariants = {
-    hidden: { 
-      height: 0, 
+    hidden: {
+      height: 0,
       opacity: 0,
       transition: {
         duration: 0.3,
-        ease: "easeOut"
-      }
+        ease: "easeOut",
+      },
     },
-    visible: { 
-      height: "auto", 
+    visible: {
+      height: "auto",
       opacity: 1,
       transition: {
         duration: 0.4,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const iconVariants = {
@@ -191,20 +137,20 @@ const FrequentlyAskedQuestions = () => {
       rotate: 180,
       transition: {
         duration: 0.3,
-        ease: "easeOut"
-      }
+        ease: "easeOut",
+      },
     },
     initial: {
       rotate: 0,
       transition: {
         duration: 0.3,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
-    <motion.section 
+    <motion.section
       className="py-16 px-4 bg-gray-50"
       initial="hidden"
       whileInView="visible"
@@ -212,17 +158,14 @@ const FrequentlyAskedQuestions = () => {
       variants={containerVariants}
     >
       <div className="max-w-4xl mx-auto">
-        <motion.h2 
+        <motion.h2
           variants={itemVariants}
           className="text-2xl md:text-3xl font-bold text-center bg-gradient-to-r from-[#007AFF] to-[#153885] text-transparent bg-clip-text mb-8"
         >
           Frequently Asked Questions
         </motion.h2>
 
-        <motion.div 
-          className="space-y-4"
-          variants={containerVariants}
-        >
+        <motion.div className="space-y-4" variants={containerVariants}>
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
@@ -235,13 +178,13 @@ const FrequentlyAskedQuestions = () => {
                 className="flex justify-between items-center w-full p-4 md:p-6 text-left hover:bg-gray-50 transition-colors"
                 whileTap={{ scale: 0.98 }}
               >
-                <motion.h3 
+                <motion.h3
                   className="text-sm md:text-base font-semibold text-gray-800 pr-4"
                   whileHover={{ color: "#007AFF" }}
                 >
                   {faq.question}
                 </motion.h3>
-                <motion.span 
+                <motion.span
                   className="text-gray-600 flex-shrink-0"
                   variants={iconVariants}
                   animate={activeIndex === index ? "rotate" : "initial"}
@@ -253,7 +196,7 @@ const FrequentlyAskedQuestions = () => {
                   )}
                 </motion.span>
               </motion.button>
-              
+
               <AnimatePresence>
                 {activeIndex === index && (
                   <motion.div
@@ -264,7 +207,7 @@ const FrequentlyAskedQuestions = () => {
                     className="overflow-hidden"
                   >
                     <div className="px-4 md:px-6 pb-4 md:pb-6">
-                      <motion.p 
+                      <motion.p
                         className="text-gray-600 text-sm md:text-base leading-relaxed"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -280,21 +223,19 @@ const FrequentlyAskedQuestions = () => {
           ))}
         </motion.div>
 
-        <motion.div 
+        <motion.div
           variants={itemVariants}
           className="flex flex-col sm:flex-row justify-center items-center gap-4 text-center mt-8"
         >
-          <motion.p 
-            className="text-gray-600"
-            whileHover={{ scale: 1.05 }}
-          >
+          <motion.p className="text-gray-600" whileHover={{ scale: 1.05 }}>
             My question is not here.
           </motion.p>
-          <motion.button 
+          <motion.button
+            onClick={() => navigate('/contact')}
             className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-gradient-to-r from-[#007AFF] to-[#153885] text-white font-semibold hover:shadow-lg transition-all"
-            whileHover={{ 
+            whileHover={{
               scale: 1.05,
-              boxShadow: "0 10px 25px rgba(0, 122, 255, 0.3)"
+              boxShadow: "0 10px 25px rgba(0, 122, 255, 0.3)",
             }}
             whileTap={{ scale: 0.95 }}
           >

@@ -68,6 +68,13 @@ const EndConnection = () => {
               Select, Invite & Collaborate.
             </motion.p>
             <motion.button
+              onClick={() => {
+                if (typeof window !== "undefined" && typeof window.open === "function") {
+                  window.open('https://dashboard.hyprlinc.com/', '_blank');
+                } else if (typeof window !== "undefined") {
+                  window.location.href = 'https://dashboard.hyprlinc.com/';
+                }
+              }}
               variants={itemVariants}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-[#007AFF] to-[#153885] text-white font-semibold hover:shadow-lg transition-all"
               whileHover={{

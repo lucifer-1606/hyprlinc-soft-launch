@@ -104,17 +104,7 @@ const Footer = () => {
                 <a href="#" className="hover:text-white">
                   Investors
                 </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">
-                  Comparison
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">
-                  Pricing
-                </a>
-              </li>
+              </li>   
             </ul>
           </div>
         </div>
